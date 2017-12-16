@@ -45,5 +45,5 @@ Each day I would ask you to post our report to slack so to know where we are. ( 
 1) React-router https://reacttraining.com/react-router/web/guides/philosophy
 2) What is SCRUM ? https://medium.com/chingu/a-short-introduction-to-the-scrum-methodology-7a23431b9f17
 3) AGILE: http://www.agilenutshell.com/
-4) Trello link: https://trello.com/ninjagiraffes
+4) Trello link: https://trello.com/b/XbbuQ5V8/karakany
 5) Github link: https://github.com/slaby93/ReactReduxProject
