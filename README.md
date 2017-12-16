@@ -3,6 +3,13 @@
 We will build simple service to create and view posts.
 API ( https://jsonplaceholder.typicode.com/ )
 
+# Git flow:
+1) You create branch only from master branch with name: <feature>-<description> eg. postList-list-posts-on-homepage
+2) You commit code into you branch
+3) When you are ready to deliver feature ( which means it's complitelly done ) you create PR to master branch
+  and assign other developer to check it.
+4) After check you can merge PR to master with squash ( which squash all your commits into 1 )
+
 # Project should:
 
 1) Be built using webpack ( I would prefer if you set him by yourself )
