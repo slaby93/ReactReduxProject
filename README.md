@@ -24,9 +24,12 @@ I would suggest to use react-router as routing is essentail in every big react-r
 You should work togeather as a team. Plan and split tasks between each other or try to use extreme programming ( pair programming style ), but it's up t you.
 
 As in every project , you should use trello in which you should be added to control current project situation.
-Each day I would ask you to post our report to slack so to know where we are. ( this will emulate SCRUM and AGIALE [<- read about them>])
+It's up to you to prepare project, divide functionality into tasks which you can resolve.
+Each day I would ask you to post our report to slack so to know where we are. ( this will emulate Scrum)
 
 # Helpful links:
 1) React-router https://reacttraining.com/react-router/web/guides/philosophy
 2) What is SCRUM ? https://medium.com/chingu/a-short-introduction-to-the-scrum-methodology-7a23431b9f17
 3) AGILE: http://www.agilenutshell.com/
+4) Trello link: https://trello.com/ninjagiraffes
+5) Github link: https://github.com/slaby93/ReactReduxProject
