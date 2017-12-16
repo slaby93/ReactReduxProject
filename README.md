@@ -13,7 +13,7 @@ API ( https://jsonplaceholder.typicode.com/ )
 # Definition of done:
 
 Done means:
-* feature is working as expectd
+* feature is working as expected
 * feature do not break any existing code
 * feature have all required parts like styling etc.
 
