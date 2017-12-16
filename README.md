@@ -10,7 +10,7 @@ API ( https://jsonplaceholder.typicode.com/ )
   and assign other developer to check it.
 4) After check you can merge PR to master with squash ( which squash all your commits into 1 )
 
-# Definiction of done
+# Definition of done:
 
 Done means:
 * feature is working as expectd
