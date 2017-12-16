@@ -10,6 +10,13 @@ API ( https://jsonplaceholder.typicode.com/ )
   and assign other developer to check it.
 4) After check you can merge PR to master with squash ( which squash all your commits into 1 )
 
+# Definiction of done
+
+Done means:
+* feature is working as expectd
+* feature do not break any existing code
+* feature have all required parts like styling etc.
+
 # Project should:
 
 1) Be built using webpack ( I would prefer if you set him by yourself )
