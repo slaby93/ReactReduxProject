@@ -11,3 +11,6 @@ console.log(dupa)
 console.log(dupa)
 console.log(dupa)
 console.log(dupa)
+
+const oczko = 77
+console.log('some new numbers', oczko + 66)
