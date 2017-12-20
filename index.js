@@ -1,5 +1,6 @@
 const myVar = 'newText'
 const dupa = 'dupa'
+const oczko = 77
 console.log('some text')
 console.log('some blabla')
 console.log('some whoa')
@@ -11,6 +12,14 @@ console.log(dupa)
 console.log(dupa)
 console.log(dupa)
 console.log(dupa)
-
-const oczko = 77
+console.log('ty huju')
+console.log('ty huju')
+console.log('ty huju')
+console.log('ty huju')
+console.log('ty huju')
+console.log('ty huju')
+console.log('ty huju')
+console.log(dupa)
+console.log('huj dupa i kamieni kupa')
+console.log('huj dupa i kamieni kupa')
 console.log('some new numbers', oczko + 66)
