@@ -1,0 +1,20 @@
+.PostListContainer{
+    list-style-type: none;
+    &_PostList{
+        box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.59);
+        margin-bottom: 5px;
+        padding: 2px;
+        &_userId{
+            display: flex;
+            justify-content: flex-start;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        &_topic{
+            &_span{
+                font-weight: 600;
+                padding-right: 3px;
+            }
+        }
+    }
+}

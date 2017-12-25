@@ -4,11 +4,15 @@ import {
     Route,
     Link
 } from 'react-router-dom'
+import PostListContainer from './../PostList/PostListContainer'
+import './style.scss'
 
 class App extends React.Component{
     render(){
         return(
-            <div></div>
+            <div className='App'>
+                <PostListContainer/>
+            </div>
         )
     }
 }

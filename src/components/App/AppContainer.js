@@ -10,17 +10,15 @@ class AppContainer extends React.PureComponent {
     }
     componentDidUpdate() {
         const { fetchPosts } = this.props
-            fetchPosts('https://jsonplaceholder.typicode.com/posts')
+        fetchPosts('https://jsonplaceholder.typicode.com/posts')
     }
     render() {
         const { fetchPosts } = this.props
-        setTimeout(()=>{
+        setTimeout(() => {
             fetchPosts('https://jsonplaceholder.typicode.com/posts')
-        },1000)
+        }, 1000)
         return (
-            <div>
-                <App />
-            </div>
+            <App />
         )
     }
 }
@@ -28,7 +26,6 @@ class AppContainer extends React.PureComponent {
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchPosts: (url) => {
-            console.log('fetvhingDta')
             dispatch({ type: POST_REDUCER.FETCH_DATA_START })
             fetch(url)
                 .then(response => response.json())
@@ -37,7 +34,6 @@ const mapDispatchToProps = (dispatch) => {
                         type: POST_REDUCER.FETCH_DATA_SUCCES,
                         response
                     })
-                    console.log('response', response)
                 })
                 .catch((error) => {
                     dispatch({
