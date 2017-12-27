@@ -3,37 +3,27 @@ import { connect } from 'react-redux'
 import PostList from './PostList'
 
 class PostListContainer extends React.Component {
-    constructor(props){
-        super(props)
-        // this.state = {
-        //     isLoaded: false,
-        //     listOfPost: null
-        // }
-        this.parseList = this.parseList.bind(this)
+    constructor() {
+        super()
+        this.showPostList = this.showPostList.bind(this)
     }
-    parseList(list){
-        return list.map((post, index)=>{
-            return (
-                <PostList 
-                {...post} 
-                key={index}
+    showPostList() {
+        const { response } = this.props
+        if (response) {
+            return response.map((post) => {
+                return <PostList
+                    post={post}
+                    key={post.id}
                 />
-            )
-        })
+            })
+        }
     }
     render() {
-        const {response}=this.props
-        if(response){
-            console.log('if', response)
-            const parsedList = this.parseList(response)
-            return (
-                <ul className='PostListContainer'>
-                    {parsedList}
-                </ul>
-            )
-        }
-        return(
-            <span></span>
+        const showPostList = this.showPostList()
+        return (
+            <ul className='PostListContainer'>
+                {showPostList}
+            </ul>
         )
     }
 }

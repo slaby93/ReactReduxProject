@@ -15,7 +15,7 @@ export default (state=defaultState, action) => {
             })
             return newState
         }
-        case FETCH_DATA_SUCCES: {
+        case FETCH_DATA_SUCESS: {
             const newState = Object.assign({}, state, {
                 isRequesting: false,
                 response: action.response
@@ -35,5 +35,5 @@ export default (state=defaultState, action) => {
 }
 
 export const FETCH_DATA_START = 'FETCH_DATA_START'
-export const FETCH_DATA_SUCCES = 'FETCH_DATA_SUCCES'
+export const FETCH_DATA_SUCESS = 'FETCH_DATA_SUCCES'
 export const FETCH_DATA_FAILURE = 'FETCH_DATA_FAILURE'
