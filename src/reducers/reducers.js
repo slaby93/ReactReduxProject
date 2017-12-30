@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 const defaultState = {
     isRequesting: false,
     response: null,
+    currentPost: null,
     error: null
 }
 
@@ -30,6 +31,30 @@ export default (state=defaultState, action) => {
             })
             return newState
         }
+        case FETCH_SINGLE_POST_DATA_START: {
+            const newState =  Object.assign({}, state, {
+                isRequesting: true,
+                currentPost: null,
+                error: null
+            })
+            return newState
+        }
+        case FETCH_SINGLE_POST_DATA_SUCESS: {
+            const newState =  Object.assign({}, state, {
+                isRequesting: false,
+                currentPost: action.response,
+                error: null
+            })
+            return newState
+        }
+        case FETCH_SINGLE_POST_DATA_FALIURE: {
+            const newState =  Object.assign({}, state, {
+                isRequesting: false,
+                currentPost: null,
+                error: action.error
+            })
+            return newState
+        }
         default: return defaultState
     }
 }
@@ -37,3 +62,7 @@ export default (state=defaultState, action) => {
 export const FETCH_DATA_START = 'FETCH_DATA_START'
 export const FETCH_DATA_SUCESS = 'FETCH_DATA_SUCCES'
 export const FETCH_DATA_FAILURE = 'FETCH_DATA_FAILURE'
+
+export const FETCH_SINGLE_POST_DATA_START = 'FETCH_SINGLE_POST_DATA_START'
+export const FETCH_SINGLE_POST_DATA_SUCESS = 'FETCH_SINGLE_POST_DATA_SUCESS'
+export const FETCH_SINGLE_POST_DATA_FALIURE = 'FETCH_SINGLE_POST_DATA_FALIURE'

@@ -1,1 +1,1 @@
-export {default} from './FullPost'
+export {default} from './FullPostContainer'

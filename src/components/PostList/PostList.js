@@ -13,7 +13,7 @@ class PostList extends React.Component {
         } = this.props
         return (
             <li className='PostListContainer_PostList'>
-                <Link to={`/fullPost/${body}/${id}/${title}/${userId}`}>
+                <Link to={`/fullPost/${id}`}>
                     <div className='PostListContainer_PostList_userId'>
                         userId: {userId}
                     </div>
