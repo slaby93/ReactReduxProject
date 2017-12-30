@@ -1,25 +1,38 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import DataBaseRequest from './../../utilites/DataBaseRequest'
+import * as DATA_REDUCER from './../../reducers/reducers'
 import App from './App'
 
-
-class AppContainer extends React.PureComponent {
-    constructor() {
-        super()
-        this.state = {
-            url: 'https://jsonplaceholder.typicode.com/posts'
-        }
+class AppContainer extends React.Component {
+    componentDidMount(){
+        const {fetchData}=this.props
+        fetchData('https://jsonplaceholder.typicode.com/posts')
     }
-    render() {
-        const { url } = this.state
-        return (
-            <div>
-                <DataBaseRequest url={url} />
-                <App />
-            </div>
-        )
+    render(){
+        return <App />
     }
 }
 
-export default AppContainer
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchData: (url) => {
+            dispatch({ type: DATA_REDUCER.FETCH_DATA_START })
+            fetch(url)
+                .then(response => response.json())
+                .then(response => {
+                    dispatch({
+                        type: DATA_REDUCER.FETCH_DATA_SUCESS,
+                        response
+                    })
+                })
+                .catch(error => {
+                    dispatch({
+                        type: DATA_REDUCER.FETCH_DATA_FALIURE,
+                        error
+                    })
+                })
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(AppContainer)

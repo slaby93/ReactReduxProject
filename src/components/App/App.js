@@ -1,18 +1,11 @@
 import React from 'react'
-import {
-    BrowserRouter as Router,
-    Route,
-    Link
-} from 'react-router-dom'
-import PostListContainer from './../PostList/PostListContainer'
-import './style.scss'
+import { Redirect } from 'react-router-dom'
+import PostList from './../PostList'
 
-class App extends React.Component{
-    render(){
-        return(
-            <div className='App'>
-                <PostListContainer/>
-            </div>
+class App extends React.Component {
+    render() {
+        return (
+            <Redirect to='/postList'/>
         )
     }
 }

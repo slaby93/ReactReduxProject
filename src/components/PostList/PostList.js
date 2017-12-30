@@ -1,24 +1,30 @@
 import React from 'react'
-import './style.scss'
+import { Link } from 'react-router-dom'
 
-export const PostList = (props) => {
-    const {
-        post: {
-            userId,
-            title
-        }
-    } = props
-    return (
-        <li className='PostListContainer_PostList'>
-            <div className='PostListContainer_PostList_userId'>
-                userId: {userId}
-            </div>
-            <div className='PostListContainer_PostList_topic'>
-                <span className='PostListContainer_PostList_span'>topic:</span>
-                {title}
-            </div>
-        </li>
-    )
+class PostList extends React.Component {
+    render() {
+        const {
+            post: {
+                body,
+                id,
+                title,
+                userId
+            }
+        } = this.props
+        return (
+            <li className='PostListContainer_PostList'>
+                <Link to={`/fullPost/${body}/${id}/${title}/${userId}`}>
+                    <div className='PostListContainer_PostList_userId'>
+                        userId: {userId}
+                    </div>
+                    <div className='PostListContainer_PostList_topic'>
+                        <span className='PostListContainer_PostList_topic_label'>topic:</span>
+                        {title}
+                    </div>
+                </Link>
+            </li>
+        )
+    }
 }
 
 export default PostList
