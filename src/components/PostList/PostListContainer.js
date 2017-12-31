@@ -2,45 +2,23 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import * as DATA_REDUCER from "./../../reducers/reducers";
-import PostList from "./PostList";
+import PostListRender from "./PostListRender";
 import "./style.scss";
 
 class PostListContainer extends React.Component {
-  constructor() {
-    super();
-    this.showPostListOnSite = this.showPostListOnSite.bind(this);
-  }
-
   componentDidMount() {
     const { fetchData } = this.props;
     fetchData("https://jsonplaceholder.typicode.com/posts");
   }
-
-  showPostListOnSite() {
-    const { response } = this.props;
-    return (
-      response &&
-      response.map(post => {
-        return <PostList post={post} key={post.id} />;
-      })
-    );
-  }
   render() {
-    const showPostListOnSite = this.showPostListOnSite();
     const { response, isRequesting } = this.props;
-    return isRequesting ? (
-      <span>...Loading</span>
-    ) : (
-      <ul className="PostListContainer">{showPostListOnSite}</ul>
-    );
+    return <PostListRender response={response} isRequesting={isRequesting} />;
   }
 }
-
 const mapStateToProps = state => {
   const { response, isRequesting } = state;
   return { response, isRequesting };
 };
-
 const mapDispatchToProps = dispatch => {
   return {
     fetchData: url => {
@@ -62,5 +40,4 @@ const mapDispatchToProps = dispatch => {
     }
   };
 };
-
 export default connect(mapStateToProps, mapDispatchToProps)(PostListContainer);
