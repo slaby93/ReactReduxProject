@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import FullPost from "./FullPost";
+import FullPostRender from "./FullPostRender";
 import * as DATA_REDUCER from "./../../reducers/reducers";
 
 class FullPostContainer extends React.PureComponent {
@@ -10,7 +10,7 @@ class FullPostContainer extends React.PureComponent {
   }
 
   render() {
-    return <FullPost {...this.props} />;
+    return <FullPostRender {...this.props} />;
   }
 }
 const mapStateToProps = state => {

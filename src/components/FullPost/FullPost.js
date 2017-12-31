@@ -4,10 +4,8 @@ import "./style.scss";
 
 class FullPost extends React.Component {
   render() {
-    const { userId, title, body, isRequesting } = this.props;
-    return isRequesting ? (
-      <span>...Loading</span>
-    ) : (
+    const { userId, title, body } = this.props;
+    return (
       <div className="FullPost">
         <div className="FullPost_userId">{userId}</div>
         <div className="FullPost_title">{title}</div>
