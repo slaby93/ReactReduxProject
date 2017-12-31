@@ -26,11 +26,11 @@ Done means:
 # GOAL 
 As in every normal project, goal can change so be prepared ;)
 
-* Nice looking project
-* Ability to see list of posts
-* Ability to see single post
+* Nice looking project 
+* Ability to see list of posts :thumbsup:
+* Ability to see single post :thumbsup:
 * Ability to create new post
-* Navigation
+* Navigation :thumbsup:
 
 # HINTS
 I would suggest to use react-router as routing is essentail in every big react-redux project's.
