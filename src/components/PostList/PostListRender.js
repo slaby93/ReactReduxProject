@@ -8,6 +8,7 @@ class PostListRender extends React.PureComponent {
   }
   showPostListOnSite() {
     const { response } = this.props;
+    console.log(this.props);
     return (
       response &&
       response.map(post => {

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
+import RaisedButton from "material-ui/RaisedButton";
 
 class FullPost extends React.Component {
   render() {
@@ -10,9 +11,9 @@ class FullPost extends React.Component {
         <div className="FullPost_userId">{userId}</div>
         <div className="FullPost_title">{title}</div>
         <div className="FullPost_body">{body}</div>
-        <button className="FullPost_Link">
-          <Link to="/">back to list</Link>
-        </button>
+        <Link to="/">
+          <button className="FullPost_button">back to main list</button>
+        </Link>
       </div>
     );
   }
