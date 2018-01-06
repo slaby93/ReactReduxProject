@@ -15,12 +15,14 @@
     border: 1px solid rgba(76, 67, 67, 0.74);
     border-radius: 2%;
     background-color: white;
-    min-height: 60px;
+    min-height: 100px;
+
     &_userId {
       display: flex;
       justify-content: flex-start;
       font-size: 24px;
       font-weight: 500;
+      padding: 10px 0px 0px 10px;
     }
 
     &_topic {

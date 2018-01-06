@@ -1,20 +1,22 @@
 .FullPost {
   margin: 0 15%;
+  padding-top: 5%;
   padding-left: 5px;
   &_button {
     font-size: 22px;
     border: none;
     background-color: #f7f7f7;
   }
-  &_button:hover{
-      cursor: pointer;
+  &_button:hover {
+    cursor: pointer;
   }
-  &_userId {
-    font-size: 44px;
+  &_icon {
+    width: 40px;
   }
   &_title {
-    font-size: 22px;
+    font-size: 30px;
     margin-bottom: 20px;
+    text-transform: capitalize;
   }
   &_body {
     margin: 10px 4px;
