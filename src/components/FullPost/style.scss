@@ -1,22 +1,28 @@
-.FullPost{
-    margin: 0 15%;
-    padding-left: 5px;
-    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.46);
-    &_userId{
-        font-size: 22px;
-    }
-    &_title{
-        font-size: 26px;
-    }
-    &_body{
-        margin: 10px 4px;
-    }
-    &_Link{
-        margin: 5px;
-        background-color: rgba(60, 216, 99, 0.5490196078431373);
-        a{
-            text-decoration: none;
-            color: black;
-        }
-    }
+.FullPost {
+  margin: 0 15%;
+  padding-top: 5%;
+  padding-left: 5px;
+  &_button {
+    font-size: 22px;
+    border: none;
+    background-color: #f7f7f7;
+  }
+  &_button:hover {
+    cursor: pointer;
+  }
+  &_icon {
+    width: 40px;
+  }
+  &_title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+  &_body {
+    margin: 10px 4px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
