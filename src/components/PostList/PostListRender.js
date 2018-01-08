@@ -1,5 +1,6 @@
 import React from "react";
 import PostList from "./PostList";
+import Loader from "./../Loader";
 
 class PostListRender extends React.PureComponent {
   constructor() {
@@ -20,7 +21,7 @@ class PostListRender extends React.PureComponent {
     const showPostListOnSite = this.showPostListOnSite();
     const { response, isRequesting } = this.props;
     return isRequesting ? (
-      <span>...Loading</span>
+      <Loader />
     ) : (
       <ul className="PostListContainer">{showPostListOnSite}</ul>
     );
